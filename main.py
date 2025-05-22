@@ -1,13 +1,8 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
 from typing import List
+from model.item import Item  # Importando a classe do model
 
 app = FastAPI()
-
-class Item(BaseModel):
-    id: int
-    nome: str
-    descricao: str
 
 itens_db: List[Item] = []
 
